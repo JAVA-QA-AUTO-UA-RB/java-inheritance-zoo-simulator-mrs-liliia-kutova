@@ -18,7 +18,6 @@ public class Bird extends Animal {
         setEnergyLevel(currentEnergy);
     }
 
-    protected void setEnergyLevel(int currentEnergy) {
 
     }
-}
+
