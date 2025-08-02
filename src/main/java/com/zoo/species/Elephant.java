@@ -11,6 +11,12 @@ public class Elephant extends Mammal {
         System.out.println("Труба-ба-ба! ");
     }
   public void spraySelf(){
-
+      int currentEnergy =getEnergyLevel();
+      currentEnergy -=15;
+      setEnergyLevel(currentEnergy);
   }
-}
+
+    }
+
+
+
