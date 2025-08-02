@@ -37,8 +37,11 @@ public class Animal {
         energyLevel += 20;
     }
 
-    protected void makeSound() {
+    public void getTired(){
+        energyLevel -=25;
+    }
 
+    public void makeSound() {
     }
 
     public void displayInfo() {
