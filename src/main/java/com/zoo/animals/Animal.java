@@ -28,6 +28,9 @@ public class Animal {
     public int getEnergyLevel(){
         return energyLevel;
     }
+    public void setEnergyLevel(int energyLevel){
+        this.energyLevel = energyLevel;
+    }
 
     public void eat() {
         energyLevel += 20;
@@ -45,7 +48,7 @@ public class Animal {
     }
 
     public void displayInfo() {
-        System.out.println(name + age + weight + energyLevel); // перевірити чи значення в дужках правильне
+        System.out.println(" Ім`я: " + name + ", Вік: " + age + ", Вага: " + weight + ", Енергія: " + energyLevel ); // перевірити чи значення в дужках правильне
 
     }
 }
