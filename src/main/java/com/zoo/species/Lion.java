@@ -18,8 +18,6 @@ public void hunt(){
     setEnergyLevel(currentEnergy);
 }
 
-    private void setEnergyLevel(int currentEnergy) {
 
     }
 
-}
