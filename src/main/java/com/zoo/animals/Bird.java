@@ -1,10 +1,10 @@
 package com.zoo.animals;
 
-public class Bird extends Animal {
+abstract class Bird extends Animal {
     protected String wingSpan;
 
-    public Bird(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+    public Bird(String name, int energyLevel) {
+        super(name, energyLevel);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Bird extends Animal {
         currentEnergy -=15;
         setEnergyLevel(currentEnergy);
     }
-
+    public abstract void uniqueBirdAction();
 
     }
 
