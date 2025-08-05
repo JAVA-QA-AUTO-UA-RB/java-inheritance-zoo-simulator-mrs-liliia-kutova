@@ -1,28 +1,17 @@
 package com.zoo.animals;
 
-public class Animal {
+abstract class Animal {
 
     protected String name;
-    protected int age;
-    protected int weight;
     private int energyLevel = 100;
 
-    public Animal(String name, int age, int weight, int energyLevel) {
+    public Animal(String name, int energyLevel) {
         this.name = name;
-        this.age = age;
-        this.weight = weight;
         this.energyLevel = energyLevel;
     }
 
     public String getName(){
         return name;
-    }
-    public int getAge(){
-        return age;
-    }
-
-    public int getWeight(){
-        return weight;
     }
 
     public int getEnergyLevel(){
@@ -31,24 +20,26 @@ public class Animal {
     public void setEnergyLevel(int energyLevel){
         this.energyLevel = energyLevel;
     }
+    public abstract void eat();
+    public abstract void sleep();
 
-    public void eat() {
-        energyLevel += 20;
+    public interface Eatable {
+        void eat();
     }
-
-    public void sleep() {
-        energyLevel += 20;
+    public interface Sleepable{
+        void sleep();
     }
 
     public void getTired(){
         energyLevel -=25;
     }
 
-    public void makeSound() {
+    public abstract void makeSound(); {
+
     }
 
     public void displayInfo() {
-        System.out.println(" Ім`я: " + name + ", Вік: " + age + ", Вага: " + weight + ", Енергія: " + energyLevel ); // перевірити чи значення в дужках правильне
+        System.out.println(" Ім`я: " + name + ", Енергія: " + energyLevel ); // перевірити чи значення в дужках правильне
 
     }
 }
