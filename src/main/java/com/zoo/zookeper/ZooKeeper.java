@@ -1,6 +1,7 @@
 package com.zoo.zookeper;
 
 import com.zoo.animals.Animal;
+import com.zoo.interfaces.Playable;
 
 public class ZooKeeper {
     private String name;
@@ -9,12 +10,12 @@ public class ZooKeeper {
         this.name = name;
     }
 
-    public void feedAnimal(Animal animal){
+    public void feedAnimal(Animal.Eatable animal){
         animal.eat();
     }
 
-    public void playWithAnimal(Animal animal){
-        animal.makeSound();
+    public void playWithAnimal(Playable animal){
+        animal.play();
     }
 
     public void checkAnimalEnergyLevel(Animal animal){
@@ -26,5 +27,6 @@ public class ZooKeeper {
         } else {
             System.out.println("Рівень енергії: високий ");
         }
+
     }
 }
