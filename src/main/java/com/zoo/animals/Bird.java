@@ -1,6 +1,6 @@
 package com.zoo.animals;
 
-abstract class Bird extends Animal {
+public abstract class Bird extends Animal {
     protected String wingSpan;
 
     public Bird(String name, int energyLevel) {
