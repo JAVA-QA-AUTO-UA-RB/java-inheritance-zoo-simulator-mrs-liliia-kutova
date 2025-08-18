@@ -1,6 +1,6 @@
 package com.zoo.animals;
 
-abstract class Animal {
+public abstract class Animal {
 
     protected String name;
     private int energyLevel = 100;
