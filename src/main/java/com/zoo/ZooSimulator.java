@@ -1,42 +1,62 @@
 package com.zoo;
 
 import com.zoo.animals.Animal;
-import com.zoo.animals.Bird;
-import com.zoo.animals.Mammal;
 import com.zoo.species.Eagle;
 import com.zoo.species.Elephant;
 import com.zoo.species.Lion;
 import com.zoo.species.Penguin;
 import com.zoo.zookeper.ZooKeeper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ZooSimulator {
 
     public static void main(String[] args) {
 
+        Lion lion = new Lion("Лев", 70);
+        Elephant elephant = new Elephant("Слон", 70);
+        Eagle eagle = new Eagle("Юний орел", 60);
+        Penguin penguin = new Penguin("Пінгвін", 65);
+
 
         // Виведіть фінальні результати та стани тварин наприкінці дня.
 
+        List<Animal> animals = new ArrayList<>();
 
-        Lion lion = new Lion("Лев",2,150,70);
-        Elephant elephant = new Elephant("Слон", 5, 5500,70);
-        Eagle eagle = new Eagle("Юний орел", 1,5,60);
-        Penguin penguin = new Penguin("Пінгвін",1, 10,65);
+        animals.add(lion);
+        animals.add(elephant);
+        animals.add(eagle);
+        animals.add(penguin);
 
+        for (Animal animal: animals){
+            animal.makeSound();
+            animal.sleep();
+        }
+
+    List <Animal.Eatable> eatableAnimals = new ArrayList<>();
+        eatableAnimals.add(lion);
+        eatableAnimals.add(elephant);
+        eatableAnimals.add(eagle);
+        eatableAnimals.add(penguin);
 
         ZooKeeper zooKeeper = new ZooKeeper();
         zooKeeper.setName("Олег ");
 
+        for (Animal.Eatable eatable: eatableAnimals){
+            zooKeeper.feedAnimal(eatable);
 
-        zooKeeper.feedAnimal(lion);
+        }
+
+
+
         zooKeeper.playWithAnimal(lion);
         lion.getTired();
-        zooKeeper.playWithAnimal(lion);
         zooKeeper.checkAnimalEnergyLevel(lion);
         lion.sleep();
         lion.hunt();
         zooKeeper.checkAnimalEnergyLevel(lion);
 
-        zooKeeper.feedAnimal(elephant);
         zooKeeper.playWithAnimal(elephant);
         elephant.spraySelf();
         elephant.getTired();
@@ -44,7 +64,6 @@ public class ZooSimulator {
         elephant.sleep();
         zooKeeper.checkAnimalEnergyLevel(elephant);
 
-        zooKeeper.feedAnimal(eagle);
         zooKeeper.playWithAnimal(eagle);
         zooKeeper.checkAnimalEnergyLevel(eagle);
         eagle.fly();
@@ -52,7 +71,6 @@ public class ZooSimulator {
         eagle.sleep();
         zooKeeper.checkAnimalEnergyLevel(eagle);
 
-        zooKeeper.feedAnimal(penguin);
         zooKeeper.playWithAnimal(penguin);
         zooKeeper.checkAnimalEnergyLevel(penguin);
         penguin.fly();
