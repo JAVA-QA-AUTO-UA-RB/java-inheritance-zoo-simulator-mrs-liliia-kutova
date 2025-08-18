@@ -1,11 +1,11 @@
 package com.zoo.animals;
 
-public class Mammal extends Animal {
+public abstract class Mammal extends Animal {
     protected String furColor;
 
 
-    public Mammal(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+    public Mammal(String name, int energyLevel) {
+        super(name, energyLevel);
     }
 
     @Override
@@ -13,9 +13,9 @@ public class Mammal extends Animal {
      System.out.println(name + " makes a sound! ");
     }
 
-    public void groom(){
+    public void groom(){}
 
-    }
+    public abstract void move();
 }
 
 
