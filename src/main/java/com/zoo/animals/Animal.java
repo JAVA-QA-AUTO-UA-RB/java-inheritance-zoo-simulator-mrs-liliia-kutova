@@ -11,7 +11,6 @@ public class Animal {
         this.name = name;
         this.age = age;
         this.weight = weight;
-        this.energyLevel = energyLevel;
     }
 
     public String getName(){
