@@ -7,7 +7,7 @@ public class Animal {
     protected int weight;
     private int energyLevel = 100;
 
-    public Animal(String name, int age, int weight, int energyLevel) {
+    public Animal(String name, int age, int weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -28,22 +28,31 @@ public class Animal {
         return energyLevel;
     }
     public void setEnergyLevel(int energyLevel){
+        if (energyLevel <0 || energyLevel >100){
+            throw new IllegalArgumentException("Energy level must be between 0 and 100");
+        }
         this.energyLevel = energyLevel;
     }
-
-    public void eat() {
-        energyLevel += 20;
+    private void increaseEnergyLevel(int i) {
     }
+    public void eat() {
+       increaseEnergyLevel(10);
+    }
+
 
     public void sleep() {
-        energyLevel += 20;
+        increaseEnergyLevel(10);
     }
+    public void decreaseEnergyLevel(int i){
 
+    }
     public void getTired(){
-        energyLevel -=25;
+        decreaseEnergyLevel(25);
     }
 
     public void makeSound() {
+        decreaseEnergyLevel(15);
+        System.out.println("Тваринка подає звук");
     }
 
     public void displayInfo() {
