@@ -1,4 +1,21 @@
 package com.zoo.species;
 
-public class Elephant {
-}
+import com.zoo.animals.Mammal;
+
+public class Elephant extends Mammal {
+    public Elephant(String name, int age, int weight, int energyLevel) {
+        super(name, age, weight);
+    }
+    @Override
+    public void makeSound() {
+        System.out.println("Труба-ба-ба! ");
+    }
+  public void spraySelf(){
+      decreaseEnergyLevel(15);
+      System.out.println(getName() + " розпилив на себе воду ");
+  }
+
+    }
+
+
+
