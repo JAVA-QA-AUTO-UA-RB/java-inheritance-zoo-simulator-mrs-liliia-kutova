@@ -4,7 +4,7 @@ import com.zoo.animals.Bird;
 
 public class Penguin extends Bird {
     public Penguin(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+        super(name, age, weight);
     }
 
     @Override
@@ -12,9 +12,8 @@ public class Penguin extends Bird {
         System.out.println("Кря-кря! ");
     }
     public void swim(){
-        int currentEnergy =getEnergyLevel();
-        currentEnergy -=20;
-        setEnergyLevel(currentEnergy);
+            decreaseEnergyLevel(20);
+            System.out.println(getName() + " летить ");
         System.out.println(" Пінгвін не літає, але плаває" );
 
     }
@@ -22,5 +21,6 @@ public class Penguin extends Bird {
     @Override
     public void fly(){
         swim();
+        System.out.println(" Я все ще птах, але також можу плавати ");
     }
 }
