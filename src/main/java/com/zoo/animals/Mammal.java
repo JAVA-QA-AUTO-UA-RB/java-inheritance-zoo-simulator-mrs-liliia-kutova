@@ -4,8 +4,8 @@ public class Mammal extends Animal {
     protected String furColor;
 
 
-    public Mammal(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+    public Mammal(String name, int age, int weight) {
+        super(name, age, weight);
     }
 
     @Override
@@ -14,6 +14,7 @@ public class Mammal extends Animal {
     }
 
     public void groom(){
+        System.out.println("Птахи мають пір`я, а ссавці мають шерсть");
 
     }
 }
