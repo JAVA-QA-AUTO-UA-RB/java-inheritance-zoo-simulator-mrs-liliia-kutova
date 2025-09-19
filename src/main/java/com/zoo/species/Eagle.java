@@ -4,18 +4,19 @@ import com.zoo.animals.Bird;
 
 public class Eagle extends Bird {
     public Eagle(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+        super(name, age, weight);
     }
 
     @Override
     public void makeSound() {
+        decreaseEnergyLevel(15);
         System.out.println("Кріі-кріі! ");
     }
     @Override
-    public void fly(){
-        int currentEnergy =getEnergyLevel();
-        currentEnergy -=20;
-        setEnergyLevel(currentEnergy);
+    public void fly()
+    {
+        decreaseEnergyLevel(15);
+        System.out.println(getName() + " летить ");
     }
 
 }
