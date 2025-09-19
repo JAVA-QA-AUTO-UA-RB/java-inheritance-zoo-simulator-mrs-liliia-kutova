@@ -3,8 +3,8 @@ package com.zoo.animals;
 public class Bird extends Animal {
     protected String wingSpan;
 
-    public Bird(String name, int age, int weight, int energyLevel) {
-        super(name, age, weight, energyLevel);
+    public Bird(String name, int age, int weight) {
+        super(name, age, weight);
     }
 
     @Override
@@ -13,9 +13,8 @@ public class Bird extends Animal {
     }
 
     public void fly(){
-        int currentEnergy = getEnergyLevel();
-        currentEnergy -=15;
-        setEnergyLevel(currentEnergy);
+        decreaseEnergyLevel(15);
+        System.out.println(getName() + "летить");
     }
 
 
