@@ -29,7 +29,6 @@ public class ZooSimulator {
 
         zooKeeper.feedAnimal(lion);
         zooKeeper.playWithAnimal(lion);
-        lion.getTired();
         zooKeeper.playWithAnimal(lion);
         zooKeeper.checkAnimalEnergyLevel(lion);
         lion.sleep();
@@ -39,7 +38,6 @@ public class ZooSimulator {
         zooKeeper.feedAnimal(elephant);
         zooKeeper.playWithAnimal(elephant);
         elephant.spraySelf();
-        elephant.getTired();
         zooKeeper.checkAnimalEnergyLevel(elephant);
         elephant.sleep();
         zooKeeper.checkAnimalEnergyLevel(elephant);
@@ -48,16 +46,17 @@ public class ZooSimulator {
         zooKeeper.playWithAnimal(eagle);
         zooKeeper.checkAnimalEnergyLevel(eagle);
         eagle.fly();
-        eagle.getTired();
         eagle.sleep();
+        eagle.makeSound();
         zooKeeper.checkAnimalEnergyLevel(eagle);
 
         zooKeeper.feedAnimal(penguin);
         zooKeeper.playWithAnimal(penguin);
         zooKeeper.checkAnimalEnergyLevel(penguin);
         penguin.fly();
-        penguin.getTired();
         penguin.sleep();
+        penguin.swim();
+        penguin.makeSound();
         zooKeeper.checkAnimalEnergyLevel(penguin);
 
         lion.displayInfo();
