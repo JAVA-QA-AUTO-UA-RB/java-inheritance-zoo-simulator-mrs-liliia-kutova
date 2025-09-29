@@ -1,6 +1,7 @@
 package com.zoo;
 
 import com.zoo.animals.Animal;
+import com.zoo.animals.Eatable;
 import com.zoo.species.Eagle;
 import com.zoo.species.Elephant;
 import com.zoo.species.Lion;
@@ -34,7 +35,7 @@ public class ZooSimulator {
             animal.sleep();
         }
 
-    List <Animal.Eatable> eatableAnimals = new ArrayList<>();
+    List <Eatable> eatableAnimals = new ArrayList<>();
         eatableAnimals.add(lion);
         eatableAnimals.add(elephant);
         eatableAnimals.add(eagle);
@@ -43,7 +44,7 @@ public class ZooSimulator {
         ZooKeeper zooKeeper = new ZooKeeper();
         zooKeeper.setName("Олег ");
 
-        for (Animal.Eatable eatable: eatableAnimals){
+        for (Eatable eatable: eatableAnimals){
             zooKeeper.feedAnimal(eatable);
 
         }
