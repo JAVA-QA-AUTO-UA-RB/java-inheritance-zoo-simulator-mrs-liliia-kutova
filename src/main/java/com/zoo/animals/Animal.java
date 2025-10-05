@@ -20,26 +20,16 @@ public abstract class Animal {
     public void setEnergyLevel(int energyLevel){
         this.energyLevel = energyLevel;
     }
-    public abstract void eat();
-    public abstract void sleep();
-
-    public interface Eatable {
-        void eat();
-    }
-    public interface Sleepable{
-        void sleep();
-    }
 
     public void getTired(){
         energyLevel -=25;
     }
 
-    public abstract void makeSound(); {
-
-    }
-
+    public abstract void makeSound();
     public void displayInfo() {
         System.out.println(" Ім`я: " + name + ", Енергія: " + energyLevel ); // перевірити чи значення в дужках правильне
 
     }
+
+    public abstract void sleep();
 }

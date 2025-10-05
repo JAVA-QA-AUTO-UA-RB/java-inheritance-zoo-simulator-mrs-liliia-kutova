@@ -1,17 +1,18 @@
 package com.zoo.species;
 
 import com.zoo.animals.Animal;
+import com.zoo.animals.Eatable;
 import com.zoo.animals.Mammal;
-import com.zoo.interfaces.Playable;
+import com.zoo.animals.Sleepable;
+import com.zoo.animals.Playable;
 
-public class Lion extends Mammal implements Animal.Eatable, Animal.Sleepable, Playable {
+public class Lion extends Mammal implements Eatable, Sleepable, Playable {
     public Lion(String name, int energyLevel) {
         super(name, energyLevel);
     }
 
     @Override
     public void eat() {
-
     }
 
     @Override

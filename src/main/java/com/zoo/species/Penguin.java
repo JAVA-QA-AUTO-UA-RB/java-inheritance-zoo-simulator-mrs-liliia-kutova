@@ -1,11 +1,9 @@
 package com.zoo.species;
 
-import com.zoo.animals.Animal;
-import com.zoo.animals.Bird;
-import com.zoo.interfaces.Playable;
+import com.zoo.animals.*;
 
 
-public class Penguin extends Bird implements Animal.Eatable, Animal.Sleepable, Playable {
+public class Penguin extends Bird implements Eatable, Sleepable, Playable{
     public Penguin(String name, int energyLevel) {
         super(name, energyLevel);
     }

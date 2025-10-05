@@ -1,10 +1,8 @@
 package com.zoo.species;
 
-import com.zoo.animals.Animal;
-import com.zoo.animals.Mammal;
-import com.zoo.interfaces.Playable;
+import com.zoo.animals.*;
 
-public class Elephant extends Mammal implements Animal.Eatable, Animal.Sleepable, Playable {
+public class Elephant extends Mammal implements Eatable, Sleepable, Playable {
     public Elephant(String name, int energyLevel) {
         super(name, energyLevel);
     }

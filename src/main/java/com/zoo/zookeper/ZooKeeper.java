@@ -1,7 +1,8 @@
 package com.zoo.zookeper;
 
 import com.zoo.animals.Animal;
-import com.zoo.interfaces.Playable;
+import com.zoo.animals.Eatable;
+import com.zoo.animals.Playable;
 
 public class ZooKeeper {
     private String name;
@@ -10,7 +11,7 @@ public class ZooKeeper {
         this.name = name;
     }
 
-    public void feedAnimal(Animal.Eatable animal){
+    public void feedAnimal(Eatable animal){
         animal.eat();
     }
 
